@@ -10,6 +10,7 @@ import {
   Resources,
   Resources2,
 } from "@/components/Dropdowns/Dropdowns";
+import { AnimatePresence } from "framer-motion";
 const LinkDropDown = (props: Props) => {
   const linkClicked = useContext(linkContext).linkClicked;
 
@@ -17,16 +18,33 @@ const LinkDropDown = (props: Props) => {
     <>
       <div className="flex justify-center">
         <div className="flex grow justify-end p-6">
-          {linkClicked === "features" && <Features></Features>}
-          {linkClicked === "solutions" && <Solutions></Solutions>}
-          {linkClicked === "plans" && <Plans></Plans>}
-          {linkClicked === "resources" && <Resources></Resources>}
+          <AnimatePresence>
+            {linkClicked === "features" && <Features></Features>}
+          </AnimatePresence>
+          <AnimatePresence>
+            {linkClicked === "solutions" && <Solutions></Solutions>}
+          </AnimatePresence>
+          <AnimatePresence>
+            {linkClicked === "plans" && <Plans></Plans>}
+          </AnimatePresence>
+          <AnimatePresence>
+            {linkClicked === "resources" && <Resources></Resources>}
+          </AnimatePresence>
         </div>
         <div className="flex grow justify-start bg-[#f7f5ff] p-6">
-          {linkClicked === "features" && <Features2></Features2>}
-          {linkClicked === "solutions" && <Solutions2></Solutions2>}
-          {linkClicked === "plans" && <Plans2></Plans2>}
-          {linkClicked === "resources" && <Resources2></Resources2>}
+          <AnimatePresence>
+            {linkClicked === "features" && <Features2></Features2>}
+          </AnimatePresence>
+          <AnimatePresence>
+            {linkClicked === "solutions" && <Solutions2></Solutions2>}
+          </AnimatePresence>
+          <AnimatePresence>
+            {" "}
+            {linkClicked === "plans" && <Plans2></Plans2>}
+          </AnimatePresence>
+          <AnimatePresence>
+            {linkClicked === "resources" && <Resources2></Resources2>}
+          </AnimatePresence>
         </div>
       </div>
     </>

@@ -160,17 +160,6 @@ const Plans2 = (props: Props) => {
     </TitleCard>
   );
 };
-<TitleCard
-  classList="w-[64rem]"
-  title="HELO TEST"
-  className="grid max-w-5xl grid-cols-3 grid-rows-2"
->
-  <CardLink Icon={AcademicCapIcon} title="TEst" description="Test"></CardLink>
-  <CardLink Icon={AcademicCapIcon} title="TEst" description="Test"></CardLink>
-  <CardLink Icon={AcademicCapIcon} title="TEst" description="Test"></CardLink>
-  <CardLink Icon={AcademicCapIcon} title="TEst" description="Test"></CardLink>
-  <CardLink Icon={AcademicCapIcon} title="TEst" description="Test"></CardLink>
-</TitleCard>;
 const Resources = (props: Props) => {
   return (
     <TitleCard
