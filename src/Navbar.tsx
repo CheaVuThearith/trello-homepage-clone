@@ -1,26 +1,21 @@
-import { AcademicCapIcon } from "@heroicons/react/16/solid";
-import CardLink from "./components/CardLink";
 import LinkDropDown from "./components/LinkDropDown";
 import { createContext, useState } from "react";
 import Link from "./components/Link";
+import linkClickedType from "./components/types";
 //
 //
 //
 interface linkContextType {
   linkClicked: linkClickedType;
-  setLinkClicked: (value:linkClickedType)=>void}
+  setLinkClicked: (value: linkClickedType) => void;
+}
 interface NavbarProps {
   className?: string;
 }
-type linkClickedType =
-  | "placeholder"
-  | "features"
-  | "solutions"
-  | "plans"
-  | "resources";
-  //
-  //
-  //
+
+//
+//
+//
 export const linkContext = createContext<linkContextType>({
   linkClicked: "placeholder",
   setLinkClicked: () => {},
@@ -35,7 +30,7 @@ const Navbar = ({ className }: NavbarProps) => {
     useState<linkClickedType>("placeholder");
   return (
     <nav className={className}>
-      <linkContext.Provider value={{ linkClicked, setLinkClicked}}>
+      <linkContext.Provider value={{ linkClicked, setLinkClicked }}>
         <div className="flex justify-evenly">
           {expandableLinks.map((link) => (
             <Link key={link} name={link}></Link>

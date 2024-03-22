@@ -2,15 +2,12 @@ import { AcademicCapIcon } from "@heroicons/react/16/solid";
 import CardLink from "../CardLink";
 import TitleCard from "../TitleCard";
 import PTag from "../PTag";
-
-type Props = {};
-
-const Features = (props: Props) => {
+import DropDownLeft from "./DropDownLeft";
+import DropDownRight from "./DropDownRight";
+const Features = () => {
   return (
-    <TitleCard
-      classList="w-[64rem]"
-      title="HELO TEST"
-      className="grid max-w-5xl grid-cols-3 grid-rows-2"
+    <DropDownLeft title="helowTest"
+    className="grid grid-rows-2 grid-cols-3"
     >
       <CardLink
         Icon={AcademicCapIcon}
@@ -37,14 +34,12 @@ const Features = (props: Props) => {
         title="TEst"
         description="Test"
       ></CardLink>
-    </TitleCard>
+    </DropDownLeft>
   );
 };
-const Features2 = (props: Props) => {
+const Features2 = () => {
   return (
-    <TitleCard
-      classList="w-[285px]"
-      className="border-[#998dd9]"
+    <DropDownRight
       title="MEET FERATURES"
     >
       <PTag>
@@ -53,10 +48,10 @@ const Features2 = (props: Props) => {
         organized. It’s simple – sign-up, create a board, and you’re off!
         Productivity awaits.
       </PTag>
-    </TitleCard>
+    </DropDownRight>
   );
 };
-const Solutions = (props: Props) => {
+const Solutions = () => {
   return (
     <TitleCard
       classList="w-[64rem]"
@@ -91,7 +86,7 @@ const Solutions = (props: Props) => {
     </TitleCard>
   );
 };
-const Solutions2 = (props: Props) => {
+const Solutions2 = () => {
   return (
     <TitleCard
       classList="w-[285px]"
@@ -107,7 +102,7 @@ const Solutions2 = (props: Props) => {
     </TitleCard>
   );
 };
-const Plans = (props: Props) => {
+const Plans = () => {
   return (
     <TitleCard
       classList="w-[64rem]"
@@ -143,7 +138,7 @@ const Plans = (props: Props) => {
   );
 };
 
-const Plans2 = (props: Props) => {
+const Plans2 = () => {
   return (
     <TitleCard
       classList="w-[285px]"
@@ -159,7 +154,7 @@ const Plans2 = (props: Props) => {
     </TitleCard>
   );
 };
-const Resources = (props: Props) => {
+const Resources = () => {
   return (
     <TitleCard
       classList="w-[64rem]"
@@ -195,7 +190,7 @@ const Resources = (props: Props) => {
   );
 };
 
-const Resources2 = (props: Props) => {
+const Resources2 = () => {
   return (
     <TitleCard
       classList="w-[285px]"
@@ -209,7 +204,7 @@ const Resources2 = (props: Props) => {
     </TitleCard>
   );
 };
-const PlaceHolder = (props: Props) => {
+const PlaceHolder = () => {
   return (
     <TitleCard
       opacity={0}
@@ -246,7 +241,7 @@ const PlaceHolder = (props: Props) => {
   );
 };
 
-const PlaceHolder2 = (props: Props) => {
+const PlaceHolder2 = () => {
   return (
     <TitleCard
       opacity={0}

@@ -1,4 +1,3 @@
-import { AcademicCapIcon } from "@heroicons/react/16/solid";
 import PTag from "./PTag";
 
 interface Props {

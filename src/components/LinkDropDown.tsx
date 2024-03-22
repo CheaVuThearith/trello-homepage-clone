@@ -11,7 +11,7 @@ import {
   Resources2,
   PlaceHolder,
   PlaceHolder2,
-} from "@/components/Dropdowns/Dropdowns";
+} from "@/components/DropDown/DropDown";
 import { AnimatePresence } from "framer-motion";
 //
 //

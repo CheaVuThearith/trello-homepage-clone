@@ -1,14 +1,22 @@
+
+import linkClickedType from "./types";
+import { linkContext } from "@/Navbar";
+import { useContext } from "react";
+//
+//
+//
 interface Props {
   name: string;
 }
-import { linkContext } from "@/Navbar";
-import { useContext } from "react";
+//
+//
+//
 const Link = ({ name }: Props) => {
-  const {linkClicked, setLinkClicked}=useContext(linkContext)
-  const nameLowered = name.toLowerCase().replace(" ", "")
+  const setLinkClicked=useContext(linkContext).setLinkClicked
+  const nameLowered = name.toLowerCase().replace(" ", "") as linkClickedType //TODO: make link for menus that dont dropdown
   return (
     <>
-      <button className="hover:text-blue-600" onDoubleClick={()=>console.log(linkClicked)} onClick={()=>setLinkClicked(nameLowered)}>{nameLowered}</button>
+      <button className="hover:text-blue-600" onClick={()=>setLinkClicked(nameLowered)}>{nameLowered}</button>
     </>
   );
 };
