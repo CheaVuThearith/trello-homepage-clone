@@ -3,7 +3,6 @@ import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import { useContext } from "react";
 import MovingUnderline from "./MovingUnderline";
 import { linkContext } from "@/Navbar";
-import { AnimatePresence } from "framer-motion";
 //
 //
 //

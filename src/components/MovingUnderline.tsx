@@ -1,9 +1,6 @@
-import { showContext } from "@/Navbar";
 import { motion } from "framer-motion";
-import { useContext } from "react";
 
 const MovingUnderline = () => {
-  const show = useContext(showContext);
   return (
     <motion.div
       layoutId="underline"
