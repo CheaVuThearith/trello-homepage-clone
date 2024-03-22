@@ -1,5 +1,5 @@
 import { linkContext, showContext } from "@/Navbar";
-import { useContext, useEffect, useRef } from "react";
+import { useContext} from "react";
 import {
   Features,
   Features2,
@@ -55,19 +55,17 @@ const LinkDropDown = () => {
               animate="visible"
               exit="hidden"
               variants={{
-                hidden: { y: -400 },
-                visible: { y: 0 },
+                hidden: { y: -400, opacity: 0 },
+                visible: { y: 0, opacity: 1 },
               }}
               transition={{
                 duration: 0.2,
                 type: "spring",
-                bounce: 0.1,
                 stiffness: 120,
                 layout: {
-                  duration: 0.1,
-                  bounce: 0.1,
+                  duration: 0.8,
                   type: "spring",
-                  stiffness: 80,
+                  bounce: 0.5,
                 },
               }}
               className="absolute left-0 right-0 z-20 flex justify-center"

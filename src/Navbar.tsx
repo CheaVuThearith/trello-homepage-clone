@@ -13,12 +13,11 @@ interface linkContextType {
 interface NavbarProps {
   className?: string;
 }
-
 //
 //
 //
 export const linkContext = createContext<linkContextType>({
-  linkClicked: "resources",
+  linkClicked: "",
   setLinkClicked: () => {},
 });
 export const showContext = createContext<boolean>(false);
@@ -26,16 +25,24 @@ export const showContext = createContext<boolean>(false);
 //
 //
 const Navbar = ({ className }: NavbarProps) => {
-  const setDarken = useContext(overlayContext).setDarken
-  const expandableLinks = ["Features", "Solutions", "Plans", "Resources"];
-  const [linkClicked, setLinkClickedU] = useState<linkClickedType>("resources");
+  const setDarken = useContext(overlayContext).setDarken;
+  const Links = [
+    "Features expand",
+    "Solutions expand",
+    "Pricing",
+    "Plans expand",
+    "Resources expand",
+  ];
+  const [linkClicked, setLinkClickedU] = useState<linkClickedType>("");
   const [show, setShow] = useState(false);
   const setLinkClicked = (value: linkClickedType) => {
     if (show === false || value !== linkClicked) {
       setLinkClickedU(value);
       setShow(true);
       setDarken(true);
-    } else {setShow((s) => !s);
+    } else {
+      setLinkClickedU("");
+      setShow((s) => !s);
       setDarken(false);
     }
   };
@@ -45,16 +52,20 @@ const Navbar = ({ className }: NavbarProps) => {
   return (
     <>
       <nav className={className}>
-        <showContext.Provider value={show}>
-          <linkContext.Provider value={{ linkClicked, setLinkClicked }}>
-            <div className="relative z-50 py-3 flex justify-center gap-x-6 bg-white shadow-lg">
-              {expandableLinks.map((link) => (
-                <Link key={link} expand name={link}></Link>
-              ))}
-            </div>
-            <LinkDropDown></LinkDropDown>
-          </linkContext.Provider>
-        </showContext.Provider>
+          <showContext.Provider value={show}>
+            <linkContext.Provider value={{ linkClicked, setLinkClicked }}>
+              <div className="relative z-50 flex justify-center gap-x-6 bg-white py-3 shadow-lg">
+                {Links.map((link) => (
+                  <Link
+                    key={link}
+                    expand={link.includes("expand") ? true : undefined}
+                    name={link}
+                  />
+                ))}
+              </div>
+              <LinkDropDown></LinkDropDown>
+            </linkContext.Provider>
+          </showContext.Provider>
       </nav>
       <div></div>
     </>

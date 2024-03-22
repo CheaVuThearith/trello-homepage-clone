@@ -1,28 +1,45 @@
-
 import linkClickedType from "./types";
-import { linkContext } from "@/Navbar";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import { useContext } from "react";
+import MovingUnderline from "./MovingUnderline";
+import { linkContext } from "@/Navbar";
+import { AnimatePresence } from "framer-motion";
 //
 //
 //
 interface Props {
   name: string;
-  expand?:boolean
+  expand?: boolean;
 }
 //
 //
 //
-const Link = ({ name, expand=false }: Props) => {
-  const setLinkClicked=useContext(linkContext).setLinkClicked
-  const nameLowered = name.toLowerCase().replace(" ", "") as linkClickedType //TODO: add underline on active link
+const Link = ({ name, expand = false }: Props) => {
+  const { linkClicked, setLinkClicked } = useContext(linkContext);
+  const nameLowered = name
+    .toLowerCase()
+    .replace(" ", "")
+    .replace("expand", "") as linkClickedType;
+  const useThisName = name.replace("expand", "") as linkClickedType;
   return (
     <>
-      <button className="hover:text-blue-600 font-semibold px-4 py-2 text-[#172b4d]" onClick={()=>expand ? setLinkClicked(nameLowered): undefined}>
-        <span className="flex items-center justify-center">  
-        {name}{expand&&<ChevronDownIcon className="size-4"/>}
+      <a
+        className={`cursor-pointer px-4 py-2 font-semibold text-[#172b4d] hover:text-blue-600 ${linkClicked === nameLowered && "text-blue-600"}`}
+        href={expand ? undefined : `${nameLowered}`}
+        onClick={() => {
+          expand ? setLinkClicked(nameLowered) : undefined;
+        }}
+      >
+        <span className="flex items-center justify-center">
+          <span className="relative">
+            {useThisName}
+            {linkClicked === nameLowered && (
+                <MovingUnderline />
+            )}
+          </span>
+          {expand && <ChevronDownIcon className="size-4" />}
         </span>
-        </button>
+      </a>
     </>
   );
 };
