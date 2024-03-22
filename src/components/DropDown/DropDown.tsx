@@ -6,7 +6,7 @@ import DropDownLeft from "./DropDownLeft";
 import DropDownRight from "./DropDownRight";
 const Features = () => {
   return (
-    <DropDownLeft title="helowTest"
+    <DropDownLeft title="odit necessitatibus"
     className="grid grid-rows-2 grid-cols-3"
     >
       <CardLink
@@ -40,13 +40,10 @@ const Features = () => {
 const Features2 = () => {
   return (
     <DropDownRight
-      title="MEET FERATURES"
+      title="qui repellendus distinctio"
     >
       <PTag>
-        Trello makes it easy for your team to get work done. No matter the
-        project, workflow, or type of team, Trello can help keep things
-        organized. It’s simple – sign-up, create a board, and you’re off!
-        Productivity awaits.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro placeat nulla facere totam id modi eaque, obcaecati laborum voluptates! At porro rerum eaque voluptatem veritatis provident, nostrum qui repellendus distinctio, odit necessitatibus iusto voluptas quisquam aliquam odio dolorum.
       </PTag>
     </DropDownRight>
   );
@@ -55,7 +52,7 @@ const Solutions = () => {
   return (
     <TitleCard
       classList="w-[64rem]"
-      title="HELO TEST"
+      title="amet consectetur adipisicing elit"
       className="grid max-w-5xl grid-cols-3 grid-rows-2"
     >
       <CardLink
@@ -91,13 +88,10 @@ const Solutions2 = () => {
     <TitleCard
       classList="w-[285px]"
       className="border-[#998dd9]"
-      title="MEET SOLUTOINS"
+      title="necessitatibus eos voluptatibus"
     >
       <PTag>
-        Trello makes it easy for your team to get work done. No matter the
-        project, workflow, or type of team, Trello can help keep things
-        organized. It’s simple – sign-up, create a board, and you’re off!
-        Productivity awaits.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui ipsum veritatis ut, labore odit sunt ea a, consectetur quia laboriosam quibusdam excepturi aspernatur et sed, illum fuga. Labore necessitatibus eos voluptatibus ipsa provident voluptatum aperiam debitis ab. Fugit laudantium, odit quae ratione accusantium facere labore asperiores hic. Delectus, aliquid!
       </PTag>
     </TitleCard>
   );
@@ -106,7 +100,7 @@ const Plans = () => {
   return (
     <TitleCard
       classList="w-[64rem]"
-      title="HELO TEST"
+      title="Lorem ipsum dolor sit amet consectetur"
       className="grid max-w-5xl grid-cols-3 grid-rows-2"
     >
       <CardLink
@@ -153,13 +147,10 @@ const Plans2 = () => {
     <TitleCard
       classList="w-[285px]"
       className="border-[#998dd9]"
-      title="MEET TRELLO"
+      title="saepe magni"
     >
       <PTag>
-        Trello makes it easy for your team to get work done. No matter the
-        project, workflow, or type of team, Trello can help keep things
-        organized. It’s simple – sign-up, create a board, and you’re off!
-        Productivity awaits.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dicta molestiae? Libero inventore laboriosam esse vero, eligendi corporis laborum cumque, quam praesentium molestias enim fuga in! Ea sit quisquam magnam, inventore illum quam labore eum non, ratione quis molestias atque reprehenderit ducimus debitis similique deserunt, sint saepe magni fugit esse?
       </PTag>
     </TitleCard>
   );
@@ -168,7 +159,7 @@ const Resources = () => {
   return (
     <TitleCard
       classList="w-[64rem]"
-      title="HELO TEST"
+      title="Lorem ipsum dolor sit amet consectetur"
       className="grid max-w-5xl grid-cols-3 grid-rows-2"
     >
       <CardLink
@@ -205,11 +196,10 @@ const Resources2 = () => {
     <TitleCard
       classList="w-[285px]"
       className="border-[#998dd9]"
-      title="RESIOURCES"
+      title="voluptatem laudantium placeat"
     >
       <PTag>
-        TrADFellSDo makes it easy for your team to get work done. No matter the
-        project,ASFrkflow, or type of team, Trello can help keep things ASDASD.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat earum, explicabo esse rem quaerat quae magnam totam non quo reprehenderit magni vero libero enim. Esse tenetur culpa doloremque asperiores dolorem sequi accusantium ratione maiores, repudiandae distinctio vero optio fugiat deleniti ex iste atque at necessitatibus! Officia autem voluptatem laudantium placeat!
       </PTag>
     </TitleCard>
   );

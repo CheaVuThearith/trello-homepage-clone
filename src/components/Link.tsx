@@ -15,7 +15,7 @@ interface Props {
 //
 const Link = ({ name, expand=false }: Props) => {
   const setLinkClicked=useContext(linkContext).setLinkClicked
-  const nameLowered = name.toLowerCase().replace(" ", "") as linkClickedType //TODO: make link for menus that dont dropdown
+  const nameLowered = name.toLowerCase().replace(" ", "") as linkClickedType //TODO: add underline on active link
   return (
     <>
       <button className="hover:text-blue-600 font-semibold px-4 py-2 text-[#172b4d]" onClick={()=>expand ? setLinkClicked(nameLowered): undefined}>
