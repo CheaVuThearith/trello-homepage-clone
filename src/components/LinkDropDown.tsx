@@ -68,7 +68,7 @@ const LinkDropDown = () => {
                   bounce: 0.5,
                 },
               }}
-              className="absolute left-0 right-0 z-20 flex justify-center"
+              className="absolute shadow-lg left-0 right-0 z-20 flex justify-center"
             >
               <div className="flex grow justify-end bg-white p-6">
                 <AnimatePresence mode="wait">

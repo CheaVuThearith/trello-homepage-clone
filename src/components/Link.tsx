@@ -30,7 +30,7 @@ const Link = ({ name, expand = false }: Props) => {
         }}
       >
         <span className="flex items-center justify-center">
-          <span className="relative">
+          <span className=" flex flex-col items-center justify-center px-2 relative">
             {useThisName}
             {linkClicked === nameLowered && (
                 <MovingUnderline />
