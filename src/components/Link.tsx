@@ -3,6 +3,7 @@ import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import { useContext } from "react";
 import MovingUnderline from "./MovingUnderline";
 import { linkContext } from "@/Navbar";
+import { AnimatePresence } from "framer-motion";
 //
 //
 //
@@ -32,9 +33,11 @@ const Link = ({ name, expand = false }: Props) => {
         <span className="flex items-center justify-center">
           <span className=" flex flex-col items-center justify-center px-2 relative">
             {useThisName}
+            <AnimatePresence>
             {linkClicked === nameLowered && (
                 <MovingUnderline />
             )}
+            </AnimatePresence>
           </span>
           {expand && <ChevronDownIcon className="size-4" />}
         </span>
