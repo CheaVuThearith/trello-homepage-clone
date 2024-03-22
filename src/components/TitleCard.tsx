@@ -10,7 +10,8 @@ interface Prop {
 const TitleCard = ({ children, title, className, classList, opacity=1 }: Prop) => {
   return (
     <motion.div
-      initial="hidden"
+    layout
+      initial="hidden"      
       animate="visible"
       exit="hidden"
       variants={{

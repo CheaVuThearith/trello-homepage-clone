@@ -134,6 +134,16 @@ const Plans = () => {
         title="TEst"
         description="Test"
       ></CardLink>
+      <CardLink
+        Icon={AcademicCapIcon}
+        title="TEst"
+        description="Test"
+      ></CardLink>
+      <CardLink
+        Icon={AcademicCapIcon}
+        title="TEst"
+        description="Test"
+      ></CardLink>
     </TitleCard>
   );
 };
@@ -204,59 +214,6 @@ const Resources2 = () => {
     </TitleCard>
   );
 };
-const PlaceHolder = () => {
-  return (
-    <TitleCard
-      opacity={0}
-      classList="w-[64rem]"
-      title="HELO TEST"
-      className="grid max-w-5xl grid-cols-3 grid-rows-2"
-    >
-      <CardLink
-        Icon={AcademicCapIcon}
-        title="TEst"
-        description="Test"
-      ></CardLink>
-      <CardLink
-        Icon={AcademicCapIcon}
-        title="TEst"
-        description="Test"
-      ></CardLink>
-      <CardLink
-        Icon={AcademicCapIcon}
-        title="TEst"
-        description="Test"
-      ></CardLink>
-      <CardLink
-        Icon={AcademicCapIcon}
-        title="TEst"
-        description="Test"
-      ></CardLink>
-      <CardLink
-        Icon={AcademicCapIcon}
-        title="TEst"
-        description="Test"
-      ></CardLink>
-    </TitleCard>
-  );
-};
-
-const PlaceHolder2 = () => {
-  return (
-    <TitleCard
-      opacity={0}
-      classList="w-[285px]"
-      className="border-[#998dd9]"
-      title="RESIOURCES"
-    >
-      <PTag>
-        TrADFellSDo makes it easy for your team to get work done. No matter the
-        project,ASFrkflow, or type of team, Trello can help keep things ASDASD.
-      </PTag>
-    </TitleCard>
-  );
-};
-
 export {
   Features,
   Features2,
@@ -266,6 +223,4 @@ export {
   Plans2,
   Resources,
   Resources2,
-  PlaceHolder,
-  PlaceHolder2,
 };
