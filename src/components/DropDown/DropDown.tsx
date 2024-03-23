@@ -6,8 +6,9 @@ import DropDownLeft from "./DropDownLeft";
 import DropDownRight from "./DropDownRight";
 const Features = () => {
   return (
-    <DropDownLeft title="odit necessitatibus"
-    className="grid grid-rows-2 grid-cols-3"
+    <DropDownLeft
+      title="odit necessitatibus"
+      className="border-b xl:grid xl:grid-cols-3 xl:grid-rows-2 xl:border-b-0"
     >
       <CardLink
         Icon={AcademicCapIcon}
@@ -39,11 +40,13 @@ const Features = () => {
 };
 const Features2 = () => {
   return (
-    <DropDownRight
-      title="qui repellendus distinctio"
-    >
+    <DropDownRight title="qui repellendus distinctio">
       <PTag>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro placeat nulla facere totam id modi eaque, obcaecati laborum voluptates! At porro rerum eaque voluptatem veritatis provident, nostrum qui repellendus distinctio, odit necessitatibus iusto voluptas quisquam aliquam odio dolorum.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro placeat
+        nulla facere totam id modi eaque, obcaecati laborum voluptates! At porro
+        rerum eaque voluptatem veritatis provident, nostrum qui repellendus
+        distinctio, odit necessitatibus iusto voluptas quisquam aliquam odio
+        dolorum.
       </PTag>
     </DropDownRight>
   );
@@ -91,7 +94,12 @@ const Solutions2 = () => {
       title="necessitatibus eos voluptatibus"
     >
       <PTag>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui ipsum veritatis ut, labore odit sunt ea a, consectetur quia laboriosam quibusdam excepturi aspernatur et sed, illum fuga. Labore necessitatibus eos voluptatibus ipsa provident voluptatum aperiam debitis ab. Fugit laudantium, odit quae ratione accusantium facere labore asperiores hic. Delectus, aliquid!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui ipsum
+        veritatis ut, labore odit sunt ea a, consectetur quia laboriosam
+        quibusdam excepturi aspernatur et sed, illum fuga. Labore necessitatibus
+        eos voluptatibus ipsa provident voluptatum aperiam debitis ab. Fugit
+        laudantium, odit quae ratione accusantium facere labore asperiores hic.
+        Delectus, aliquid!
       </PTag>
     </TitleCard>
   );
@@ -150,7 +158,12 @@ const Plans2 = () => {
       title="saepe magni"
     >
       <PTag>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dicta molestiae? Libero inventore laboriosam esse vero, eligendi corporis laborum cumque, quam praesentium molestias enim fuga in! Ea sit quisquam magnam, inventore illum quam labore eum non, ratione quis molestias atque reprehenderit ducimus debitis similique deserunt, sint saepe magni fugit esse?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate,
+        dicta molestiae? Libero inventore laboriosam esse vero, eligendi
+        corporis laborum cumque, quam praesentium molestias enim fuga in! Ea sit
+        quisquam magnam, inventore illum quam labore eum non, ratione quis
+        molestias atque reprehenderit ducimus debitis similique deserunt, sint
+        saepe magni fugit esse?
       </PTag>
     </TitleCard>
   );
@@ -199,7 +212,12 @@ const Resources2 = () => {
       title="voluptatem laudantium placeat"
     >
       <PTag>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat earum, explicabo esse rem quaerat quae magnam totam non quo reprehenderit magni vero libero enim. Esse tenetur culpa doloremque asperiores dolorem sequi accusantium ratione maiores, repudiandae distinctio vero optio fugiat deleniti ex iste atque at necessitatibus! Officia autem voluptatem laudantium placeat!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat earum,
+        explicabo esse rem quaerat quae magnam totam non quo reprehenderit magni
+        vero libero enim. Esse tenetur culpa doloremque asperiores dolorem sequi
+        accusantium ratione maiores, repudiandae distinctio vero optio fugiat
+        deleniti ex iste atque at necessitatibus! Officia autem voluptatem
+        laudantium placeat!
       </PTag>
     </TitleCard>
   );

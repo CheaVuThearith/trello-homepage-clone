@@ -5,13 +5,19 @@ interface Prop {
   title: string;
   className?: string;
   classList?: string;
-  opacity?: number
+  opacity?: number;
 }
-const TitleCard = ({ children, title, className, classList, opacity=1 }: Prop) => {
+const TitleCard = ({
+  children,
+  title,
+  className,
+  classList,
+  opacity = 1,
+}: Prop) => {
   return (
     <motion.div
-    layout
-      initial="hidden"      
+      layout
+      initial="hidden"
       animate="visible"
       exit="hidden"
       variants={{
@@ -23,8 +29,12 @@ const TitleCard = ({ children, title, className, classList, opacity=1 }: Prop) =
       }}
       className={`${classList}`}
     >
-      <h1 className="pb-5 text-lg font-semibold text-[#172b4d]">{title} </h1>
-      <div className={`border-t border-[#172b4d41] pt-7 ${className}`}>
+      <h1 className="border-b py-5 text-lg font-semibold text-[#172b4d] xl:border-b-0 xl:p-0 xl:pb-5">
+        {title}{" "}
+      </h1>
+      <div
+        className={`border-b-0 border-[#172b4d41] xl:border-t xl:pt-7 ${className}`}
+      >
         {children}
       </div>
     </motion.div>

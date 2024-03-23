@@ -23,7 +23,13 @@ function App() {
     <>
       <overlayContext.Provider value={{ darken, setDarken }}>
         <Navbar />
-        <AnimatePresence>{darken && <Overlay />}</AnimatePresence>
+        <AnimatePresence>
+          {darken && (
+            <Overlay
+              type={window.innerWidth >= 1280 ? "opaqueBlack" : "white"}
+            />
+          )}
+        </AnimatePresence>
       </overlayContext.Provider>
     </>
   );

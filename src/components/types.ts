@@ -1,8 +1,3 @@
-type linkClickedType =
-  | ""
-  | "features"
-  | "solutions"
-  | "plans"
-  | "resources";
+type linkClickedType = "" | "features" | "solutions" | "plans" | "resources";
 
 export default linkClickedType;

@@ -5,7 +5,9 @@ type Props = {
 };
 
 const PTag = ({ children }: Props) => {
-return <p className="text-sm leading-6 font-medium text-[#505f79]">{children}</p>;
+  return (
+    <p className="text-sm font-medium leading-6 text-[#505f79]">{children}</p>
+  );
 };
 
 export default PTag;

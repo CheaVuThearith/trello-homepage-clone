@@ -1,15 +1,19 @@
 import { motion } from "framer-motion";
-const Overlay = () => {
+interface Props {
+  type: string;
+}
+const Overlay = ({ type }: Props) => {
   return (
     <motion.div
       initial="hidden"
-      animate="visible"
+      animate={type}
       exit="hidden"
       variants={{
         hidden: { opacity: 0 },
-        visible: { opacity: .2 },
+        opaqueBlack: { opacity: 0.2, backgroundColor: "black" },
+        white: { opacity: 1, backgroundColor: "white" },
       }}
-      className="absolute z-10 h-[100%] w-[100%] bg-black"
+      className="absolute z-10 h-[100%] w-[100%]"
     ></motion.div>
   );
 };

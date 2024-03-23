@@ -1,25 +1,26 @@
-import React from 'react'
-import TitleCard from '../TitleCard'
+import React from "react";
+import TitleCard from "../TitleCard";
 //
 //
 //
 type Props = {
-    children:React.ReactNode
-    title:string
-    className?:string
-}
+  children: React.ReactNode;
+  title: string;
+  className?: string;
+};
 //
 //
 //
-const DropDownRight = ({children, title, className}: Props) => {
+const DropDownRight = ({ children, title, className }: Props) => {
   return (
-<TitleCard
-classList="w-[285px]"
-className={`border-[#998dd9] ${className}`}
-title={title}
->
-{children}
-</TitleCard>  )
-}
+    <TitleCard
+      classList="xl:w-[285px] w-[97%]"
+      className={`border-[#998dd9] ${className}`}
+      title={title}
+    >
+      {children}
+    </TitleCard>
+  );
+};
 
-export default DropDownRight
+export default DropDownRight;

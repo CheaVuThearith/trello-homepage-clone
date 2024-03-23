@@ -10,7 +10,7 @@ const CardLink = ({ Icon, title, description }: Props) => {
     <>
       <a
         href={`#${title}`}
-        className="flex min-h-[100px] flex-col gap-y-3 px-3 py-6 transition-all hover:bg-[#eef5ff]"
+        className="flex flex-col gap-y-1 border-b py-3 transition-all hover:bg-[#eef5ff] xl:border-b-0 xl:px-3 xl:py-6"
       >
         <div className="flex items-center justify-start gap-x-3">
           <Icon className="size-8 fill-[#7a869a]"></Icon>
