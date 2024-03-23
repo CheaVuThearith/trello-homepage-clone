@@ -1,10 +1,8 @@
 import LinkDropDown from "./components/LinkDropDown";
-import { createContext, useContext, useEffect, useState } from "react";
-import Link from "./components/Link";
+import { createContext, useContext, useState } from "react";
 import linkClickedType from "./components/types";
 import { overlayContext } from "./App";
 import { AnimatePresence, motion } from "framer-motion";
-import MovingUnderline from "./components/MovingUnderline";
 import BaseNav from "./components/BaseNav";
 //
 //
