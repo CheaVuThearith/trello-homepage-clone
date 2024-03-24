@@ -32,8 +32,8 @@ const BaseNav = () => {
       className="sticky z-50 w-[100vw]"
       transition={{
         type: "spring",
-        stiffness: 100,
-        damping: 14,
+        stiffness: 110,
+        damping: 18,
       }}
     >
       <ul className="relative flex h-[100vh] select-none flex-col items-center gap-x-6 bg-white py-3 shadow-lg xl:h-auto xl:flex-row xl:justify-center xl:py-0">
@@ -44,7 +44,7 @@ const BaseNav = () => {
               expand={link.includes("expand") ? true : undefined}
               name={link}
             />
-            <AnimatePresence>
+            <AnimatePresence custom={linkClicked===""} mode="sync" >
               {linkClicked ===
                 link.replace(" ", "").replace("expand", "").toLowerCase() &&
                 window.innerWidth >= 1280 && <MovingUnderline />}

@@ -11,9 +11,6 @@ interface linkContextType {
   linkClicked: linkClickedType;
   setLinkClicked: (value: linkClickedType) => void;
 }
-interface NavbarProps {
-  className?: string;
-}
 //
 //
 //
@@ -72,8 +69,8 @@ const Navbar = () => {
                     }}
                     transition={{
                       type: "spring",
-                      stiffness: 100,
-                      damping: 14,
+                      stiffness: 110,
+                      damping: 18,
                     }}
                     className="h-[100vh]"
                   >
