@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-interface Props {
-  type: string;
+interface Prop{
+  type:string
 }
-const Overlay = ({ type }: Props) => {
+const Overlay = ({type}:Prop) => {
   return (
     <motion.div
       initial="hidden"

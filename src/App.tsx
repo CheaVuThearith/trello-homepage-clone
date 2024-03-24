@@ -25,9 +25,7 @@ function App() {
         <Navbar />
         <AnimatePresence>
           {darken && (
-            <Overlay
-              type={window.innerWidth >= 1280 ? "opaqueBlack" : "white"}
-            />
+            <Overlay type="opaqueBlack" />
           )}
         </AnimatePresence>
       </overlayContext.Provider>

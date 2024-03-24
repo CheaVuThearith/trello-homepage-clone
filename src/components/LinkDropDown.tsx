@@ -11,7 +11,6 @@ import {
   Resources2,
 } from "@/components/DropDown/DropDown";
 import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
-import { ChevronLeftIcon } from "@heroicons/react/16/solid";
 //
 //
 //
@@ -29,7 +28,7 @@ const LinkDropDown = () => {
     resources: Resources2,
   };
   const { linkClicked, setLinkClicked } = useContext(linkContext);
-  const show = useContext(showContext);
+  const show = useContext(showContext).show;
   const TopComponent = componentMap[linkClicked];
   const BottomComponent = componentMap2[linkClicked];
   return (
@@ -41,14 +40,15 @@ const LinkDropDown = () => {
               <motion.div
                 initial="hidden"
                 animate="visible"
+                exit={{ height: 0, transition: { duration: 0.3 } }}
                 variants={{
                   hidden: { height: 0 },
                   visible: { height: 160 },
                 }}
                 transition={{
-                  duration: 0.2,
+                  duration: 1,
                 }}
-                className="absolute left-0 right-0 top-0 z-20 bg-white"
+                className="absolute left-0 right-0 top-0 -z-30 bg-white"
               ></motion.div>
             )}
             <motion.div
@@ -57,7 +57,7 @@ const LinkDropDown = () => {
               animate="visible"
               exit="hidden"
               variants={{
-                hidden: { y: -400, opacity: 0 },
+                hidden: { y: -600, opacity: 0 },
                 visible: {
                   y: 0,
                   opacity: 1,
@@ -75,22 +75,9 @@ const LinkDropDown = () => {
                 damping: 14,
                 opacity: { duration: 1 },
               }}
-              className="absolute left-0 right-0 z-20 flex h-[100vh] flex-col gap-y-2 bg-white shadow-lg xl:h-auto xl:flex-row xl:justify-center"
+              className="absolute left-0 right-0 -z-30 flex h-[100vh] flex-col gap-y-2 bg-white shadow-lg xl:h-auto xl:flex-row xl:justify-center"
             >
               <div className="flex flex-col bg-white px-6 xl:grow xl:flex-row xl:justify-end xl:p-6">
-                {window.innerWidth < 1280 && (
-                  <button
-                    onClick={() => {
-                      setLinkClicked("");
-                    }}
-                    className="w-full border-b py-4 text-left text-xl text-[#172b4d]"
-                  >
-                    <span className="flex items-center">
-                      <ChevronLeftIcon className="size-6" />
-                      Back
-                    </span>
-                  </button>
-                )}{" "}
                 <AnimatePresence mode="wait">
                   {linkClicked !== "" && <TopComponent key={linkClicked} />}
                 </AnimatePresence>
