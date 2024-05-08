@@ -20,6 +20,7 @@ const LinkDropDown = () => {
     solutions: Solutions,
     plans: Plans,
     resources: Resources,
+    "": null,
   };
   const componentMap2 = {
     features: Features2,
@@ -27,7 +28,8 @@ const LinkDropDown = () => {
     plans: Plans2,
     resources: Resources2,
   };
-  const { linkClicked, setLinkClicked } = useContext(linkContext);
+  const linkClicked: keyof typeof componentMap =
+    useContext(linkContext).linkClicked || "features";
   const show = useContext(showContext).show;
   const TopComponent = componentMap[linkClicked];
   const BottomComponent = componentMap2[linkClicked];
@@ -79,12 +81,18 @@ const LinkDropDown = () => {
             >
               <div className="flex flex-col bg-white px-6 xl:grow xl:flex-row xl:justify-end xl:p-6">
                 <AnimatePresence mode="wait">
-                  {linkClicked !== "" && <TopComponent key={linkClicked} />}
+                  {
+                    // @ts-expect-error because
+                    linkClicked !== "" && <TopComponent key={linkClicked} />
+                  }
                 </AnimatePresence>
               </div>
               <div className="flex bg-[#f7f5ff] px-6 xl:grow xl:justify-start xl:p-6">
                 <AnimatePresence mode="wait">
-                  {linkClicked !== "" && <BottomComponent key={linkClicked} />}
+                  {
+                    // @ts-expect-error because
+                    linkClicked !== "" && <BottomComponent key={linkClicked} />
+                  }
                 </AnimatePresence>
               </div>
             </motion.div>

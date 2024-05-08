@@ -1,6 +1,4 @@
 import { useContext } from "react";
-import Link from "./Link";
-import MovingUnderline from "./MovingUnderline";
 import { AnimatePresence, motion } from "framer-motion";
 import { linkContext, showContext } from "@/Navbar";
 import { Bars3Icon, ChevronLeftIcon } from "@heroicons/react/16/solid";

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import Link from "./Link";
 import MovingUnderline from "./MovingUnderline";
 import { AnimatePresence, motion } from "framer-motion";
-import { linkContext, showContext } from "@/Navbar";
+import { linkContext} from "@/Navbar";
 
 const BaseNav = () => {
   const Links = [
@@ -12,7 +12,6 @@ const BaseNav = () => {
     "Plans expand",
     "Resources expand",
   ];
-  const show = useContext(showContext).show;
   const linkClicked = useContext(linkContext).linkClicked;
   return (
     <>

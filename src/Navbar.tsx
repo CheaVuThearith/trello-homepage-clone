@@ -1,10 +1,7 @@
-import LinkDropDown from "./components/LinkDropDown";
-import { createContext, useContext, useEffect, useRef, useState } from "react";
-import linkClickedType from "./components/types";
+import { createContext, useContext, useEffect, useState } from "react";
 import { overlayContext } from "./App";
-import { AnimatePresence, motion } from "framer-motion";
-import BaseNav from "./components/BaseNav";
 import NavContainer from "./components/NavContainer";
+import linkClickedType from "./components/types";
 //
 //
 //
@@ -12,9 +9,9 @@ interface linkContextType {
   linkClicked: linkClickedType;
   setLinkClicked: (value: linkClickedType) => void;
 }
-interface showContextType{
-  show:boolean,
-  setShow:(value:boolean)=>void
+interface showContextType {
+  show: boolean;
+  setShow: (value: boolean) => void;
 }
 //
 //
@@ -24,8 +21,8 @@ export const linkContext = createContext<linkContextType>({
   setLinkClicked: () => {},
 });
 export const showContext = createContext<showContextType>({
-  show:false,
-  setShow:()=>{}
+  show: false,
+  setShow: () => {},
 });
 //
 //
@@ -36,7 +33,7 @@ const Navbar = () => {
     setShow(false);
     setDarken(false);
   };
-  
+
   const setDarken = useContext(overlayContext).setDarken;
   const [linkClicked, setLinkClickedU] = useState<linkClickedType>("");
   const [show, setShow] = useState(false);
@@ -46,7 +43,7 @@ const Navbar = () => {
       setShow(true);
       setDarken(true);
     } else {
-      handleWindowWidthChange()
+      handleWindowWidthChange();
     }
   };
 
@@ -65,9 +62,9 @@ const Navbar = () => {
   //
   return (
     <>
-      <showContext.Provider value={{show, setShow}}>
+      <showContext.Provider value={{ show, setShow }}>
         <linkContext.Provider value={{ linkClicked, setLinkClicked }}>
-            <NavContainer/>
+          <NavContainer />
         </linkContext.Provider>
       </showContext.Provider>
     </>
